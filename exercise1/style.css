@@ -1,0 +1,33 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+.first,
+.second{
+  font-size: 30px;
+}
+.first {
+  width: 25%;
+  height: 100px;
+  background-color: aqua;
+  display:inline-block;
+}
+#em{
+  font-size: 2em;
+}
+
+.second {
+  width: 25%;
+  height: 100px;
+  background-color: rgb(58, 69, 69);
+  display:inline-block;
+}
+#rem{
+  font-size: 2rem;
+}

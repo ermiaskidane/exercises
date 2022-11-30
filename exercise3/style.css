@@ -1,0 +1,90 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  background-color: black;
+  color: aliceblue;
+}
+
+@media only screen and (min-width: 1200px){
+  body{
+    background-color:cadetblue;
+  }
+
+  .media5{
+    display: block;
+  }
+  .media1,
+  .media2,
+  .media3,
+  .media4{
+    display: none;
+  }
+}
+@media (max-width: 1199px) and (min-width: 992px) {
+  body{
+    background-color:rgb(43, 226, 83);
+  }
+
+  .media3{
+    display: block;
+  }
+  .media1,
+  .media2,
+  .media4,
+  .media5{
+    display: none;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 769px) {
+  body{
+    background-color:rgb(226, 43, 137);
+  }
+
+  .media2{
+    display: block;
+  }
+  .media1,
+  .media3,
+  .media4,
+  .media5{
+    display: none;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 601px) {
+  body{
+    background-color:rgb(226, 134, 43);
+  }
+
+  .media1{
+    display: block;
+  }
+  .media2,
+  .media3,
+  .media4,
+  .media5{
+    display: none;
+  }
+}
+
+@media (max-width: 600px)  {
+  body{
+    background-color:rgb(67, 16, 175);
+  }
+
+  .media1{
+    display: block;
+  }
+  .media2,
+  .media3,
+  .media4,
+  .media5{
+    display: none;
+  }
+}

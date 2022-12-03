@@ -502,7 +502,7 @@ input[type=submit]:hover{
   }
   .footer-container{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
     margin-bottom: 1rem;
     gap: 2rem;
@@ -511,5 +511,8 @@ input[type=submit]:hover{
   .footer-2,
   .footer-3{
     flex: 1 1 350px;
+  }
+  .footer-map{
+   transform: translateX(-70px)
   }
 }

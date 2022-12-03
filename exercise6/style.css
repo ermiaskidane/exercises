@@ -209,7 +209,194 @@ box-shadow: 5px 5px 5px rgba(200, 200, 200, 0.8);
   color: #333333;
 }
 /* menu end */
+/* testimony style start */
+.testimony-hero{
+  position: relative;
+}
+.testimony-hero img{
+  opacity: 0.75;
+}
+.testimony-text{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transform: translate(-50%, -50%);
 
+  top: 50%;
+  left: 50%;
+  color: white;
+  font-size: 1.4rem;
+  width: 80%;
+  height: 100%;
+  font-weight: lighter;
+}
+
+.testimony-qoute{
+  font-size: 6rem;
+}
+/* testimony style end */
+
+/* Expertos style start */
+  .expert{
+    position: relative;
+    /* margin-right: 10px; */
+    margin-bottom: 1rem;
+  }
+
+  .expert-img{
+    height: 60vh;
+  }
+  .expert-info{
+    background-color: white;
+    position: absolute;
+    width: 80%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto 1.5rem auto;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  expert-info p {
+    color: #333333;
+    font-weight: lighter;
+    margin: 1rem 0;
+  }
+  .expert-social{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin:0 auto;
+    color: #0A66c2;
+  }
+
+  .expert-social :last-child{
+    color: #55ACEE;
+  }
+/* Expertos style end */
+
+/* Reservation style start */
+.reservation{
+  position: relative;
+  margin-bottom: 1rem;
+}
+.reservation-img{
+  height: 85vh;
+}
+.reservation-form-section{
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+}
+
+.reservation-form-section h2{
+  color: white;
+  margin-bottom: 0;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 1.5rem 1.5rem 1.5rem;
+}
+
+input[type=text],
+input[type=email],
+input[type=number],
+textarea{
+  padding: 10px;
+  margin-bottom: 1.6rem;
+  border-radius: 5px;
+  border:none;
+}
+/* .half-input{
+
+} */
+
+.form-input-half{
+  width: calc(50% - 0.7rem);
+}
+.half-input :first-child{
+  margin-right: 1rem;
+}
+
+input[type=submit]{
+  align-self: flex-end;
+}
+
+input[type=submit]:hover{
+  background-color: #e76f51;
+}
+/* Reservation style end */
+
+/* footer style start */
+ footer{
+  background-color: #333333;
+  padding: 1rem 2rem;
+  color: white;
+ }
+
+ .footer-info-p{
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+ }
+
+ .footer-brand{
+  font-family: 'Rancho', cursive;
+  font-size: 4rem;
+  display: block;
+ }
+
+ .footer-social{
+  display: flex;
+  justify-content: space-evenly;
+  width: 75%;
+  margin: 1rem auto;
+  font-size: 2.5rem;
+ }
+
+ .footer-title{
+  color:#E76F51;
+  position: relative;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+ }
+
+ .footer-title::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0.5rem;
+  border-bottom: 1px solid white;
+  width: 25%;
+ }
+ .footer-times{
+  list-style: none;
+ }
+ .footer-times li{
+  padding-bottom: 1rem;
+ }
+ .footer-map{
+  width: 50%;
+  display: block;
+  margin: 1rem auto;
+ }
+ .direction{
+  margin-bottom: 1rem;
+ }
+ .copyright{
+  text-align: center;
+  color: rgba(250, 250, 250, 0.8)
+ }
+/* footer style end */
 @media screen and (min-width: 725px){
   body{
     max-width: 960px;
@@ -292,5 +479,37 @@ box-shadow: 5px 5px 5px rgba(200, 200, 200, 0.8);
   .menu-item::after{
     width: 75%;
     margin: 0 auto;
+  }
+  .experts{
+    padding: 2rem;
+  }
+  .experts-container{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .expert-img{
+    height: 350px;
+  }
+
+  .reservation-form-section{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 40%;
+    height: 95%;
+  }
+  .footer-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    gap: 2rem;
+  }
+  .footer-1,
+  .footer-2,
+  .footer-3{
+    flex: 1 1 350px;
   }
 }

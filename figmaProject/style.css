@@ -382,6 +382,15 @@ nav {
     width: 250px;
     margin: 15px auto 0 auto;
   }
+  .header--content-btn:hover{
+    background-color: #F6F7F1;
+  }
+  .header--content-btn:hover .content--btn{
+    color: #F14C36;
+    font-weight: 500;
+    transform: scale(1.1);
+    transition: all 0.8s 0.5s;
+  }
   .content--btn{
     text-transform: uppercase;
     letter-spacing: 1.5px;

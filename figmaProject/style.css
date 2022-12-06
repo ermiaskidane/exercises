@@ -1,0 +1,409 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+/* header tag style start */
+header {
+  background-color: #29182E;
+  position: relative;
+  height: 770px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+
+  
+}
+
+.nav--title{
+  font-size: 32px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color:#F14C36;
+  cursor: pointer;
+}
+.nav--btn,
+.btn{
+  background-color: #F14C36;
+}
+
+.nav--btn{
+  border-radius: 40px;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+.btn{
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  line-height: 20px;
+  color: #F6F7F1;
+}
+
+.header--content {
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  left: 75px;
+  top: 220px;
+  width: 650px;
+  height: 50px;
+}
+.header--content h1,
+.header--content p{
+  color:#F6F7F1;
+}
+
+.header--content h1{
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  padding-bottom: 1rem;
+  width: max-content;
+}
+.header--content p{
+  width: 38vw;
+  font-size: 20px;
+}
+
+/* here I hide button of the header-content on disktop viewport */
+.header--content-btn {
+  display: none;
+}
+.content--btn{
+  display: none;
+}
+
+.header--img{
+  position: absolute;
+  right: 0;
+  top: 142px;
+  height: 750px;
+  width: 639px;
+}
+
+/* header tag style end */
+
+/* Social content style start */
+.social{
+  background-color: #F6F7F1;
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 0 100px 0 20px;
+}
+
+.social img{
+  max-width: 338px;
+  height: 696px;
+  margin-top: 44px;
+  flex: 1
+}
+
+.social--content{
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  flex: 2;
+}
+.social--title{
+ color: #29182E;
+ text-align: right;
+ text-transform: uppercase;
+ height: 100px;
+
+ font-size: 50px;
+ font-weight: 500;
+ line-height: 50px;
+}
+.social--info{
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 41px;
+  text-align: right;
+}
+#social{
+  display: block;
+  color: #F14C36;
+}
+#integrity{
+  color: #436B2C;
+}
+/* Social content style end */
+
+/* platform section style start */
+.platform{
+  padding: 80px 0;
+  background-color: #F6F7F1;
+}
+
+.platform--title{
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: 1.5px;
+  color: #29182E;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.platform--content{
+  display: flex;
+  padding: 50px 80px;
+  gap: 15px;
+}
+.platform--content .star{
+  color: #F14C36;
+  padding: 2px;
+  border: 1px solid #F14C36;
+}
+.platform--content .key{
+  color: #436B2C;
+  padding: 2px;
+  border: 1px solid #436B2C;
+}
+.platform--content .speaker{
+  color: #ECB20D;
+}
+
+.platform--unity,
+.platform--privacy,
+.platform--clarity{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.platform--unity h3,
+.platform--privacy h3,
+.platform--clarity h3{
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+
+.platform--unity p,
+.platform--privacy p,
+.platform--clarity p{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+  text-align: center;
+}
+
+
+
+.platform--unity h3{
+  color: #F14C36;
+}
+.platform--privacy h3{
+  color: #436B2C;
+}
+.platform--clarity h3{
+  color: #ECB20D;
+}
+
+.platform--unity p{
+  color: #F14C36;
+}
+.platform--privacy p{
+  color: #436B2C;
+}
+.platform--clarity p{
+  color: #ECB20D;
+}
+/* platform section style end */
+
+/* Footer style start */
+.footer{
+  background-color:  #29182E;
+  padding: 5px 20px;
+}
+.footer--title{
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #F14C36;
+  text-align: center;
+  padding-top: 60px;
+  cursor: pointer;
+}
+.footer--lists{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+
+.footer--lists li{
+  color: #ECB20D;
+}
+
+.footer--lists li a{
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ECB20D;
+}
+.footer p{
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #F6F7F1;
+  padding-bottom: 15px;
+}
+/* Footer style end */
+
+@media screen and (max-width: 936px){
+  .social{
+    flex-direction: column;
+    padding: 44px 20px;
+  }
+
+  .social img{
+    width: 293px;
+    height: 603px;
+    align-self: center;
+  }
+
+  .social--content{
+    text-align: center;
+  }
+
+  .social--title{
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    height: 70px;
+  }
+
+  .social--info{
+    font-size: 15px;
+    margin-top: 18px;
+    text-align: center;
+  }
+
+  .platform--title{
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .platform--content{
+    flex-direction: column;
+  }
+  .platform--unity h3,
+  .platform--privacy h3,
+  .platform--clarity h3{
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .platform--unity p,
+  .platform--privacy p,
+  .platform--clarity p{
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .footer--lists{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+  }
+  
+  .footer--lists li a{
+    display: inline-block;
+  }
+  .footer--lists li a:hover{
+    opacity: 0.9;
+    transform: scale(1.2);
+    transition: all 1s;
+  }
+}
+
+@media screen and (max-width: 800px){
+  header{
+    height: 500px;
+  }
+  nav{
+    justify-content: center;
+  }
+  /* here I hide button "Get Started" on mobile viewport */
+  .nav--btn{
+    display:none;
+  }
+  .header--content {
+    top: 150px;
+
+    left: 20px;
+    padding-left: 10vw;
+    text-align: center;
+    width: 70vw;
+  }
+  .header--content h1{
+    text-transform: uppercase;
+    font-size: 30px;
+    width: 100%;
+  }
+  .header--content p{
+    width: 100%;
+    font-size: 15px;
+  }
+  .header--content-btn{
+    display:block;
+    border-radius: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #F14C36;
+
+    width: 250px;
+    margin: 15px auto 0 auto;
+  }
+  .content--btn{
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    display: block;
+    color: #F6F7F1;
+  }
+  .header--img{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .platform--content{
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 330px){
+  .header--content-btn{
+    transform: translateX(-35px);
+  }
+}

@@ -389,7 +389,7 @@ nav {
     color: #F14C36;
     font-weight: 500;
     transform: scale(1.1);
-    transition: all 0.8s 0.5s;
+    transition: all 0.6s 0.3s;
   }
   .content--btn{
     text-transform: uppercase;
@@ -416,3 +416,5 @@ nav {
     transform: translateX(-35px);
   }
 }
+
+/* https://jolly-smakager-c69057.netlify.app/ */

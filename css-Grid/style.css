@@ -1,0 +1,92 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-size: 16px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+header {
+  background-color: gray;
+}
+
+header nav h1{
+  font-size: 20px;
+  padding: 8px 0;
+  text-align: center;
+}
+main{
+  background-color: antiquewhite;
+  padding: 10px 10px 0 5px;
+}
+.main-content{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows:  repeat(3, minmax(min-content, 200px));
+  grid-template-areas:
+  "lorem1  lorem2 lorem3"
+  "lorem4  lorem5 lorem3"
+  "lorem6  lorem6 lorem3" ;
+  /* gap: 10px; */
+  
+  /* margin-top: 5px; */
+}
+.main-content p span{
+  display: none;
+}
+
+.lorem-1{
+  margin: 5px;
+  
+  grid-area: lorem1;
+}
+.lorem-2{
+  margin: 5px;
+  grid-area: lorem2;
+}
+.lorem-3{
+  margin: 5px 5px 0 5px;
+  grid-area: lorem3;
+}
+.lorem-4{
+  margin: 5px;
+  grid-area: lorem4;
+}
+.lorem-5{
+  margin: 5px;
+  grid-area: lorem5;
+}
+.lorem-6{
+  margin: 5px 5px 0 5px;
+  grid-area: lorem6;
+}
+
+.main-content div{
+  background-color: white;
+}
+
+footer{
+  background-color: gray;
+}
+
+footer h2{
+  font-size: 16px;
+  padding: 8px 0;
+  text-align: center;
+}
+@media screen and (max-width: 850px){
+  .main-content{
+    grid-template-areas: 
+    "lorem1  lorem2 lorem4"
+    "lorem5  lorem3 lorem3"
+    "lorem6  lorem6 lorem6" ;
+  }
+
+  .main-content p span{
+    display: inline-block;
+  }
+}

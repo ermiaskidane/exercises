@@ -1,0 +1,28 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 2fr;
+  grid-template-rows: minmax(100px, auto);
+  gap: 1em;
+}
+.wrapper div{
+  padding: 1em;
+  background-color: blanchedalmond;
+}
+
+.wrapper .lorem{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 70px;
+  gap: 1em;
+}
+
+.wrapper .lorem p{
+  border: #333 1px solid;
+  padding: 1em;
+}

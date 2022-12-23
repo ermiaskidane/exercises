@@ -18,3 +18,28 @@ body{
   display: flex;
 
 }
+
+.burger--title{
+  margin-right: auto;
+}
+
+.burger--lists{ 
+  display: flex;
+  justify-content: space-between;
+
+  width: 40vw;
+}
+
+.burger--lists p{
+  cursor: pointer;
+}
+
+.nav--lists{
+  display: none;
+}
+.hide {
+  display: none;
+}
+.menu {
+  display: none;
+}

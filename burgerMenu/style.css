@@ -50,3 +50,45 @@ body{
   }
 }
 
+@media only screen and (max-width: 760px){
+  .menu {
+    display: block;
+  } 
+
+  .burger--lists{
+    max-height: 0;
+    /* visibility: hidden; */
+    overflow: hidden;
+  }
+
+  .nav--lists{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 40vh;
+  }
+
+  .nav--lists li{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding: 5px 0;
+    cursor: pointer;
+  }
+
+  .nav--lists li:first-child{
+    margin-top: 20px;
+  }
+
+  .nav--lists li:hover {
+    background-color: rgb(113, 69, 157);
+  }
+
+  .visibility{
+    height: 0;
+    visibility: hidden;
+  }
+}
+

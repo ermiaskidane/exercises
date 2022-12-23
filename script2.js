@@ -186,3 +186,80 @@ function toCSV(s) {
 }
 
 toCSV(students)
+
+const kilometers = [12, 6, 5, 20, 13]
+
+// let miles = []
+
+// kilometers.forEach((item) => {
+//   // let prod = item * 0.62137
+//   miles.push(item * 0.62137)
+// })
+
+// console.log(miles)
+function toMiles(kilometers) {
+  console.log(kilometers.map((item) => item * 0.62137))
+}
+
+toMiles(kilometers)
+
+// filter exercise#############################################
+const inputArray = ['18', '27', 19, 21, '22', NaN, undefined]
+
+// console.log(inputArr)
+
+function canVote(inputArray) {
+  // through parse change to numbers
+  let inputArr = []
+  inputArray.forEach((item) => {
+    inputArr.push(parseInt(item))
+  })
+  // then filter only the numbers
+  let age = inputArr.filter((item) => {
+    return item
+  })
+  console.log('#####' + age)
+  return age
+}
+
+console.log('~~~~~~~~~~~~~~~~')
+console.log(canVote(inputArray))
+
+// voters filter ##########################
+const voters = [22, 23, 12, 34, 21, 14]
+
+// let passed = voters.filter((item) => {
+//   return item >= 18
+// })
+// console.log(passed)
+console.log('#############')
+function ageVoters(v) {
+  let passed = v.filter((item) => {
+    return item >= 18
+  })
+
+  return passed
+}
+
+console.log(ageVoters(voters))
+
+// Reduce exercise: sum
+function sum(voters) {
+  let total = voters.reduce((acc, curr) => {
+    return acc + curr
+  })
+
+  return total
+}
+
+console.log(sum(voters))
+
+// Reduce product:
+function product(v) {
+  let prod = v.reduce((acc, curr) => {
+    return acc * curr
+  })
+  return prod
+}
+
+console.log(product(voters))

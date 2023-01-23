@@ -3,9 +3,27 @@ let searchedUser = document.querySelector('.searchedUser')
 let singleUser = document.querySelector('.singleUser')
 let userContent = document.querySelector('.userContent')
 
+// document.querySelector('body').addEventListener('DOMContentLoaded', (event) => {
+//   searchedUser.classList.add('hiden')
+//   singleUser.classList.add('hiden')
+// })
+let GithubIcon = document.querySelector('.fa-github')
+
+GithubIcon.addEventListener('click', () => {
+  console.log(masthead.classList.value)
+  if (
+    searchedUser.classList.value !== 'hiden' ||
+    singleUser.classList.value !== 'hiden'
+  ) {
+    searchedUser.classList.add('hiden')
+    singleUser.classList.add('hiden')
+    masthead.classList.remove('hiden')
+  }
+})
+
 let SearchUser = (e) => {
   const loc = document.getElementById('textAddress').value
-  console.log(loc)
+
   fetch(`https://api.github.com/search/users?q=${loc}`)
     .then((res) => res.json())
     .then((data) => {
@@ -17,6 +35,9 @@ let SearchUser = (e) => {
   masthead.classList.add('hiden')
   singleUser.classList.add('hiden')
   e.preventDefault()
+
+  const loc2 = document.getElementById('textAddress')
+  console.log(loc2)
 }
 
 let ListUsers = (dta) => {
@@ -26,14 +47,14 @@ let ListUsers = (dta) => {
     userTemplate += `<div class="col-lg-4">
     <div class="testimonial-item mx-auto mb-5 mb-lg-0" id="userId">
         <img class="img-fluid rounded-circle mb-3" src="${user.avatar_url}" alt="..." />
-        
+        <div class="visible">
           <h5 id="pickeduser">${user.login}</h5>
           <a href="#" class="font-weight-light mb-0 " id="singleuser" onClick="userFunc('${user.login}')">Visit the profile</a>
-        
+        </div>        
     </div>
 </div>`
   })
-  // <a href="${user.html_url}" class="font-weight-light mb-0" id="singleuser" onClick="userFunc('${user}')">Visit the profile</a>
+
   searchedUser.classList.remove('hiden')
   document.querySelector('.users').innerHTML = userTemplate
 }
@@ -95,11 +116,8 @@ let userFunc = (user) => {
   `
     })
 
-  // <img class="img-fluid rounded-circle mb-3" id="user_image" src="" alt="..." />
   searchedUser.classList.add('hiden')
   singleUser.classList.remove('hiden')
-
-  ListUsers()
 }
 
 document.getElementById('submitButton').addEventListener('click', SearchUser)

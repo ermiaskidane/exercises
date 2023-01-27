@@ -4,23 +4,25 @@ import { faker } from '@faker-js/faker'
 console.log(faker)
 function App() {
   return (
-    <div class='ui card'>
-      <div class='image'>
+    <div className='ui card'>
+      <div className='image'>
         <img src={faker.image.avatar()} />
       </div>
-      <div class='content'>
-        <a class='header'>{faker.name.fullName()}</a>
-
-        <div class='description'>{faker.lorem.paragraph()}</div>
+      <div className='content'>
+        <a className='header'>{faker.name.fullName()}</a>
+        <div className='friends'>
+          <span>Friends</span>
+        </div>
+        <div className='description'>{faker.lorem.paragraph()}</div>
       </div>
-      <div class='user_content extra content '>
+      <div className='user_content extra content '>
         <a>
-          <i class='user icon'></i>
+          <i className='user icon'></i>
           {faker.random.numeric()} Friends
         </a>
 
-        <div class='meta'>
-          <span class='date'>
+        <div className='meta'>
+          <span className='date'>
             {/* Joined in {faker.date.past('10', '2020-01-01T00:00:00.000Z')} */}
             Joined in 2014
           </span>
@@ -29,5 +31,3 @@ function App() {
     </div>
   )
 }
-
-export default App

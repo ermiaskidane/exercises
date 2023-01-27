@@ -1,0 +1,12 @@
+.card {
+  margin: 20vh  auto !important;
+}
+
+.user_content {
+  display: flex;
+  justify-content:space-between;
+}
+
+.user_content .meta {
+  justify-self: flex-end !important;
+}

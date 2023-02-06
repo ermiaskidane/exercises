@@ -7,6 +7,8 @@
   color:rgba(0, 0, 0, 0.847)
 }
 
+
+
 /* About */
 .About {
   width: 70vw;
@@ -77,6 +79,10 @@
 
 .About{
   height: 88Vh;
+}
+
+.social-icons a:hover{
+  color:rgba(0, 0, 0, 0.847)
 }
 
 

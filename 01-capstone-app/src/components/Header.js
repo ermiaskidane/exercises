@@ -10,8 +10,14 @@ function Header() {
           Diamond
           <i class='fa-solid fa-diamond'></i>
         </Link>
-        <Navbar.Brand href='/'>Home</Navbar.Brand>
-        <Navbar.Brand href='/about'>About</Navbar.Brand>
+        <Link to='/' className='header_link'>
+          Home
+        </Link>
+        <Link to='/about' className='header_link'>
+          About
+        </Link>
+        {/* <Navbar.Brand to='/'>Home</Navbar.Brand>
+        <Navbar.Brand to='/about'>About</Navbar.Brand> */}
         {/* <Navbar.Toggle aria-controls='responsive-navbar-nav' />
         <Navbar.Collapse id='responsive-navbar-nav'>
           <Nav className='me-auto'>

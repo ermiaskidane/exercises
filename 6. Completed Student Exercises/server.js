@@ -34,3 +34,7 @@ function homeHandler(request, response) {
 app.use(ServerError)
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`))
+
+module.exports = {
+  app: app,
+}

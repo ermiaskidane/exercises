@@ -90,11 +90,6 @@ app.get('/products', async (req, res) => {
 app.post('/products', async (req, res) => {
   console.log(req.body)
   const { name, brand, price, imageUrl, description } = req.body
-  // const name = req.body.name
-  // const brand = req.body.brand
-  // const price = req.body.price
-  // const img = req.body.imageUrl
-  // const des = req.body.description
 
   let newProduct = await productModel.create({
     name,

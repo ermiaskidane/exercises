@@ -9,6 +9,7 @@ const app = express()
 const PORT = process.env.PORT
 
 app.use(cors())
+app.use(express.json())
 
 // lets connect our node app to mongodb
 mongoose.set('strictQuery', false)

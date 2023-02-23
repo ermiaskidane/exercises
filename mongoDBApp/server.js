@@ -88,7 +88,6 @@ app.get('/products', async (req, res) => {
 })
 
 app.post('/products', async (req, res) => {
-  console.log(req.body)
   const { name, brand, price, imageUrl, description } = req.body
 
   let newProduct = await productModel.create({

@@ -107,6 +107,24 @@ app.post('/products', async (req, res) => {
   })
 })
 
+app.put('/products/:id', async (req, res) => {
+  const product = await productModel.findById(req.params.id)
+  if (product) {
+    ;(product.name = req.body.name),
+      (product.brand = req.body.brand),
+      (product.price = req.body.price),
+      (product.imageUrl = req.body.imageUrl),
+      (product.description = req.body.description)
+
+    await product.save()
+    const allProduct = await productModel.find({})
+    res.json(allProduct)
+  } else {
+    res.status(404)
+    throw new Error('Product not found')
+  }
+})
+
 app.get('/productsapi', async (req, res) => {
   const url = 'https://jsonplaceholder.typicode.com/users'
   try {

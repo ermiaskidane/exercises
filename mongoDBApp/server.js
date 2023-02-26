@@ -125,6 +125,18 @@ app.put('/products/:id', async (req, res) => {
   }
 })
 
+app.delete('/products/:id', async (req, res) => {
+  const product = await productModel.findById(req.params.id)
+  if (product) {
+    await product.remove()
+    const allProduct = await productModel.find({})
+    res.json(allProduct)
+  } else {
+    res.status(404)
+    throw new Error('Product not found')
+  }
+})
+
 app.get('/productsapi', async (req, res) => {
   const url = 'https://jsonplaceholder.typicode.com/users'
   try {

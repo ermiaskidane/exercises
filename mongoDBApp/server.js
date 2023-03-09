@@ -9,6 +9,7 @@ const app = express()
 const PORT = process.env.PORT
 
 app.use(cors())
+app.use(express.json())
 
 // lets connect our node app to mongodb
 mongoose.set('strictQuery', false)
@@ -84,6 +85,56 @@ app.get('/', (req, res) => {
 app.get('/products', async (req, res) => {
   let productData = await productModel.find({})
   res.send(productData)
+})
+
+app.post('/products', async (req, res) => {
+  const { name, brand, price, imageUrl, description } = req.body
+
+  let newProduct = await productModel.create({
+    name,
+    brand,
+    price,
+    imageUrl,
+    description,
+  })
+  // res.send(newProduct)
+  productModel.find({}, (err, allProducts) => {
+    if (err) {
+      res.send(`error in getting the products ${err}`)
+    } else {
+      res.send(allProducts)
+    }
+  })
+})
+
+app.put('/products/:id', async (req, res) => {
+  const product = await productModel.findById(req.params.id)
+  if (product) {
+    ;(product.name = req.body.name),
+      (product.brand = req.body.brand),
+      (product.price = req.body.price),
+      (product.imageUrl = req.body.imageUrl),
+      (product.description = req.body.description)
+
+    await product.save()
+    const allProduct = await productModel.find({})
+    res.json(allProduct)
+  } else {
+    res.status(404)
+    throw new Error('Product not found')
+  }
+})
+
+app.delete('/products/:id', async (req, res) => {
+  const product = await productModel.findById(req.params.id)
+  if (product) {
+    await product.remove()
+    const allProduct = await productModel.find({})
+    res.json(allProduct)
+  } else {
+    res.status(404)
+    throw new Error('Product not found')
+  }
 })
 
 app.get('/productsapi', async (req, res) => {
